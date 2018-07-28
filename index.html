@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Minimal Angular 6 Setup w/ SystemJs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <main>Loading...</main>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="system.config.js"></script>
+    <script>
+        System.import('dist/main.js').catch(function(err) { console.log(err); });
+    </script>
+</body>
+</html>

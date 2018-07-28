@@ -1,12 +1,14 @@
 System.config({
     paths: {
-        'npm': '/node_modules'
+        'npm:': '/node_modules/'
     },
     map: {
         app: 'dist/app',
         'core-js': 'npm:core-js',
         'zone.js': 'npm:zone.js',
         'rxjs': 'npm:rxjs',
+        'rxjs/operators': 'npm:rxjs/operators',
+        'rxjs-compat': 'npm:rxjs-compat',
         'tslib': 'npm:tslib/tslib.js',
         '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
         '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
@@ -16,7 +18,8 @@ System.config({
     },
     packages: {
         'dist/app': {},
-        'rxjs': {},
+        'rxjs': {main: 'index.js', defaultExtension: 'js'},
+        'rxjs/operators': {main: 'index.js', defaultExtension: 'js'},
         'core-js': {},
         'zone.js': {}
     }
